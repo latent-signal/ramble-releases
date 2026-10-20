@@ -1,0 +1,89 @@
+name: Bug report
+description: Report a problem with Ramble that you can reproduce
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Anyone can read what you write here.
+
+        Do not attach a review, a screenshot, or a recording, and do not paste from one. A review records your screen and your voice, so its screenshots, video, transcript, and `review.md` can show other apps and windows, window titles, browser URLs, and file or folder paths.
+
+        Paste only the log lines that show the problem, and replace each private value with a placeholder such as `<path>` or `<app>`.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected Ramble to do instead.
+      placeholder: The review had no ring on the screenshot where I clicked the Save button.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps that make the problem happen.
+      placeholder: |
+        1. Press Control-Option-R and choose a Safari window.
+        2. Click a button and talk about it.
+        3. Press Control-Option-R again and open the review.
+    validations:
+      required: true
+  - type: input
+    id: ramble-version
+    attributes:
+      label: Ramble version
+      description: About Ramble, in the menu bar menu, shows the version and the build.
+      placeholder: Version 0.0.0 (0)
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version and Mac
+      placeholder: macOS 15.6, MacBook Pro with Apple M3
+    validations:
+      required: true
+  - type: dropdown
+    id: target
+    attributes:
+      label: What were you recording?
+      options:
+        - A window
+        - An app
+        - A display
+        - A region
+        - Not sure
+    validations:
+      required: false
+  - type: dropdown
+    id: agents
+    attributes:
+      label: Agents involved
+      multiple: true
+      options:
+        - Claude Code
+        - Codex
+        - Cursor
+        - Pi
+        - Another agent
+        - None or not sure
+    validations:
+      required: false
+  - type: textarea
+    id: log
+    attributes:
+      label: Log lines (optional)
+      description: Review every line before you paste it. Remove app names, paths, and any other private value.
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I have checked that this issue holds no screenshots, recordings, paths, or other private data from my screen.
+          required: true

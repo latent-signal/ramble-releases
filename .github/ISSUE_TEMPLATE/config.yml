@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Privacy
+    url: https://ramblemac.com/privacy
+    about: What the website records, and how the app keeps recordings on your Mac.
+  - name: Website
+    url: https://ramblemac.com/
+    about: Download Ramble and read how it works.
