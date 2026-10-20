@@ -1,3 +1,5 @@
+<img src="icon.png" width="128" height="128" alt="Ramble app icon">
+
 # Ramble
 
 Ramble is a macOS menu bar app for showing your coding agent what you mean. Press a hotkey, point at anything on your screen and talk, then press the hotkey again. Ramble writes a review your agent can read: each spoken remark with a screenshot, a ring where you pointed, and the name of the UI element under the pointer.
